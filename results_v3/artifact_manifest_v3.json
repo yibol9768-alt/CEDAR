@@ -1,0 +1,1688 @@
+{
+  "schema_version": "3.0",
+  "code_version": "cedar_v3_spotlight",
+  "provenance_lock_summary": {
+    "n_pinned_hf_models": 14,
+    "n_pinned_hf_datasets": 6,
+    "hf_model_commit_shas": {
+      "Qwen/Qwen2.5-7B-Instruct": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "HuggingFaceH4/zephyr-7b-beta": "892b3d7a7b1cf10c7a701c60881cd93df615734c",
+      "tiiuae/Falcon3-7B-Instruct": "1e57a0ecd176c7c139f289c60a74e57f887c3dfb",
+      "allenai/OLMo-2-1124-7B-Instruct": "470b1fba1ae01581f270116362ee4aa1b97f4c84",
+      "GSAI-ML/LLaDA-8B-Instruct": "08b83a6feb34df1a6011b80c3c00c7563e963b07",
+      "microsoft/Phi-4-mini-instruct": "cfbefacb99257ffa30c83adab238a50856ac3083",
+      "ibm-granite/granite-3.1-8b-instruct": "4009206d5fc95d2e65a7b7633e159d6e97e25d35",
+      "answerdotai/ModernBERT-large": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "microsoft/deberta-v3-large": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "Qwen/Qwen2.5-3B": "3aab1f1954e9cc14eb9509a215f9e5ca08227a9b",
+      "Qwen/Qwen2.5-3B-Instruct": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "TrustSafeAI/RADAR-Vicuna-7B": "4ff1f23a69a36aa1df47b0933be6279f1b896c9b",
+      "desklib/ai-text-detector-v1.01": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+      "Hello-SimpleAI/chatgpt-detector-roberta": "d2b342c61775d5dd0221808a79983ed3b86ffd86"
+    },
+    "hf_dataset_commit_shas": {
+      "HuggingFaceH4/no_robots": "e6f9a4ac5c37faeb744ba9ecf0473184d7f8105b",
+      "yaful/MAGE": "342663f0a2b775455c023f5d36a1341ff0ec5402",
+      "liamdugan/raid": "865cac74188466cb0c3b7574a10204007b57a459",
+      "chillies/IELTS-writing-task-2-evaluation": "ce4ab2f4e652ce08582f5488b23e1ebffa222e26",
+      "ONE-Lab/MixSet": "b6063c77f660c2ef2e17461d85c24219a88f7d19",
+      "toloka/beemo": "9c014107fe9b85c4c784c1ce3a43b0b7b0a6d162"
+    },
+    "requirements_lock_packages": 0
+  },
+  "mixset_clustering_verification": {
+    "n_all": 720,
+    "n_all_human": 450,
+    "n_all_machine": 270,
+    "n_pure": 620,
+    "n_pure_human": 350,
+    "n_pure_machine": 270,
+    "n_hwt_llm_polished": 200,
+    "n_mgt_humanized": 100,
+    "n_families_all": 120,
+    "n_families_pure": 120,
+    "family_size_histogram": {
+      "3": 40,
+      "5": 30,
+      "9": 50
+    }
+  },
+  "compute_accounting": {
+    "n_saved_neural_runs": 116,
+    "n_modernbert_runs": 86,
+    "n_deberta_runs": 30,
+    "total_logged_train_eval_seconds": 30529.49,
+    "total_logged_train_eval_gpu_hours": 8.4804,
+    "modernbert_seconds_mean": 216.38,
+    "modernbert_seconds_min_max": [
+      126.8,
+      386.01
+    ],
+    "deberta_seconds_mean": 397.36,
+    "deberta_seconds_min_max": [
+      348.66,
+      715.78
+    ],
+    "stage2_bidirectional_generation_timings_seconds": {},
+    "archived_canonical_checkpoints": [
+      "results_v3/checkpoints/db_v3_cedar_split_op_seed42.pt",
+      "results_v3/checkpoints/mb_v3_cedar_split_op_seed42.pt",
+      "results_v3/checkpoints/mb_v3_strong_combined_no_nsd_seed42.pt"
+    ]
+  },
+  "scripts": {
+    "scripts/probe_assets.py": {
+      "sha256": "553e5040edff1f2f9f9f4006d3b8a502026ec06b570f5a6ff3a0c658450242d1",
+      "bytes": 1412
+    },
+    "scripts/step1_prepare_sources_and_external.py": {
+      "sha256": "1195506207e28dd5b67ad4485bb37385111b142045d9a31207a49f1a9780d4da",
+      "bytes": 13927
+    },
+    "scripts/step2_generate_symmetric_matrix.py": {
+      "sha256": "dda5683200abf2c09f29dd5db627f4876b1176c62f39769005bc58031e345db1",
+      "bytes": 29271
+    },
+    "scripts/step3_eval_pretrained_and_probes.py": {
+      "sha256": "4a1c5d2868eb0cd5418d27b5b2620fbaf7c96c996d675335c5dd5c0c683f6c2c",
+      "bytes": 14460
+    },
+    "scripts/step4_train_cedar_and_baselines.py": {
+      "sha256": "da3ea4d39462be444d5119577ef2191786515c8700935b8c6ddc7385827f6461",
+      "bytes": 28676
+    },
+    "scripts/step4_worker2_bottom_up.py": {
+      "sha256": "b59bb14f9960bfa38e9df516c28cc4fc8dc01c6957a72c7accd8770b732dd3f1",
+      "bytes": 2269
+    },
+    "scripts/step4b_nsd_rank_and_spectrum.py": {
+      "sha256": "fa121504e2743595779d3483ca54c61ecdd69aea1dfc1f1ca685af6da1b65120",
+      "bytes": 16421
+    },
+    "scripts/step5_statistical_analysis_and_figures.py": {
+      "sha256": "726ab5bece2f82571d0fc78c2d977e54a97d8fd419a153d4d69cf9e03c64c0b5",
+      "bytes": 47766
+    },
+    "scripts/step6_generate_iclr_figures.py": {
+      "sha256": "80e0d80b9003012efb5947a397a68053ca8d954956ee1e353c5c03e98d1352ae",
+      "bytes": 25643
+    },
+    "scripts/step7_generate_latex_tables.py": {
+      "sha256": "bed60d89ae8557cb6e104f0e3caea1645b4c0122239122cbbfca704863137d4d",
+      "bytes": 30232
+    },
+    "scripts/v3_4way_worker.py": {
+      "sha256": "7c42517d033b2f8ab431f52adcc379e317b72a159119e794bc04a98a1a39cfb3",
+      "bytes": 4179
+    },
+    "scripts/v3_bottom_up_tail_worker.py": {
+      "sha256": "a58ad75f760e6a2f1dfcf9a377c6d7aa3a78a72957b70574e939bbf7ad667a08",
+      "bytes": 4028
+    },
+    "scripts/v3_build_v2_benchmark.py": {
+      "sha256": "4c9ef0a5076cbd4b54d722dc73af0b342411d6662e6824ef292494e2306a6838",
+      "bytes": 45954
+    },
+    "scripts/v3_eval_pretrained_on_confirm.py": {
+      "sha256": "a8bfde512265eb9d3e056b78215aa1231c061f6fa15d2812b1c53ba4263608f3",
+      "bytes": 13824
+    },
+    "scripts/v3_finish_tail.py": {
+      "sha256": "17095eb1ee19dfdd01f5d85def0897aa74c69bdd346c2f90fc5214b843dadf1f",
+      "bytes": 4570
+    },
+    "scripts/v3_live_sync_and_finalize.py": {
+      "sha256": "e7a3b05a1640bf57b23aa7fd2fb327f40bd6d7f34bd7f3507944d8496a90257f",
+      "bytes": 12684
+    },
+    "scripts/v3_run_named_jobs.py": {
+      "sha256": "baa9e74901f2fa7c98bebc873af8841b6450f8e2213c265055074c92343e59bd",
+      "bytes": 3015
+    },
+    "scripts/v3_step5_statistical_analysis.py": {
+      "sha256": "14824353840967a9b55269046d0744274a14b4b20ff49249e97d0d052779db45",
+      "bytes": 61893
+    },
+    "scripts/v3_step6_generate_iclr_figures.py": {
+      "sha256": "77d5d7cdbee88baa27c899b96e472981738275ac5562995a2b5ba731458301c8",
+      "bytes": 25303
+    },
+    "scripts/v3_step7_generate_latex_tables.py": {
+      "sha256": "360482e4f4aa7687c1dffa1f95c3d0e3d56e79d9070ae8ebfb00a7405f2ba625",
+      "bytes": 30678
+    },
+    "scripts/v3_theorem2_convergence_and_geometry.py": {
+      "sha256": "6362708464f9f53f8a6ba895b1afb0f9a758053b98ccb96c1b6538b166765afe",
+      "bytes": 17853
+    },
+    "scripts/v3_train_cedar_v2_suite.py": {
+      "sha256": "00402dfce35461a8349c20c959bf19cd646a9d67bd52890d288c3cec530a8de6",
+      "bytes": 42046
+    },
+    "scripts/v3_verify_and_manifest_artifacts.py": {
+      "sha256": "cde6205b348c067b74d1b72db633ec3186a898ba6db93a325cf7ff68d3ee8e1d",
+      "bytes": 7593
+    },
+    "scripts/verify_and_manifest_artifacts.py": {
+      "sha256": "8d72529cb8c038947cd7799a25444ccc929c0156e7d7067dd250c9003f8e5644",
+      "bytes": 12918
+    },
+    "src/cedar_model.py": {
+      "sha256": "785d8472a6b9bcfeaf3d1f757e06bc1d6a43a8a529132dd27be4a0a4ca70adca",
+      "bytes": 19240
+    },
+    "src/cedar_v2_model.py": {
+      "sha256": "b0e3a01ca94c8c27b8a7bb9962316aaed0bd215d64cfaf663a5a563d20760222",
+      "bytes": 20268
+    }
+  },
+  "datasets_and_locks": {
+    "data/cache_drafts_llada.json": {
+      "sha256": "1178c286cc478b07884afe4866def7f4f0336cf3d5b337556c06fe7a6f5c21c9",
+      "sha256_prefix12": "1178c286cc47",
+      "bytes": 131957
+    },
+    "data/cache_drafts_olmo2.json": {
+      "sha256": "d1fd0ecc69f8d80f7e2a8dfef62d84533751a26e2d41d3197749f3d2af9e4602",
+      "sha256_prefix12": "d1fd0ecc69f8",
+      "bytes": 261553
+    },
+    "data/cache_drafts_qwen.json": {
+      "sha256": "20cf32b3f7dc10146092aef310a6463b69046038268c0c248efcb83cd431480c",
+      "sha256_prefix12": "20cf32b3f7dc",
+      "bytes": 318578
+    },
+    "data/cache_drafts_zephyr.json": {
+      "sha256": "24557a9e68a822a51d5f5de92a11a21237615498485ede6996db13d88218dbaf",
+      "sha256_prefix12": "24557a9e68a8",
+      "bytes": 494509
+    },
+    "data/cache_e4_regen_falcon3.json": {
+      "sha256": "0fb2210fc44f5d0e505c51b1b1251fa55122e451a8f6c6a43100574739ba447b",
+      "sha256_prefix12": "0fb2210fc44f",
+      "bytes": 192875
+    },
+    "data/cache_e4_regen_qwen.json": {
+      "sha256": "8da7b3ff2ce57dbc9c055788df7c2caa0c3c844709c53a0fbf78129ffc25fdf5",
+      "sha256_prefix12": "8da7b3ff2ce5",
+      "bytes": 133505
+    },
+    "data/cache_edits_falcon3.json": {
+      "sha256": "de60d4198891cf1dc9f156f16c02aa59d9fec04b978806d4c8ef15e5c255d9d6",
+      "sha256_prefix12": "de60d4198891",
+      "bytes": 2568846
+    },
+    "data/cache_edits_phi4_ood.json": {
+      "sha256": "9dd3f539a7a2e5bbf5b9252ea7be76f25a556cc57bd3d66fc581c53dd306f3d4",
+      "sha256_prefix12": "9dd3f539a7a2",
+      "bytes": 2086644
+    },
+    "data/cache_edits_qwen.json": {
+      "sha256": "c70f499f2530bf74cba5347eca592f8d0397c5ecb425036e3ce2ae6e5eda3e1d",
+      "sha256_prefix12": "c70f499f2530",
+      "bytes": 2398115
+    },
+    "data/external_beemo.json": {
+      "sha256": "49fd95ac5b3a232a7be9d351dc148971e70aef8d3651fcf519bb607bfe9211a9",
+      "sha256_prefix12": "49fd95ac5b3a",
+      "bytes": 1622713,
+      "n_records": 1200,
+      "n_clusters": 300
+    },
+    "data/external_esl_full.json": {
+      "sha256": "1503dfde25bb7923639bb7b9a0db051d391e87a0e9af20932e3b85265640c9b6",
+      "sha256_prefix12": "1503dfde25bb",
+      "bytes": 1219579,
+      "n_records": 600,
+      "n_clusters": 300
+    },
+    "data/external_esl_raw.json": {
+      "sha256": "5ca7484bdd1044e61287e452798a608552cf9ccd4f06eef7ed2e93777636b9c0",
+      "sha256_prefix12": "5ca7484bdd10",
+      "bytes": 606080,
+      "n_records": 300,
+      "n_clusters": 300
+    },
+    "data/external_mage_wild.json": {
+      "sha256": "156b9fa38b0434d35687046ef1d96c52b116a36021530213fcd9f3b0fc46d178",
+      "sha256_prefix12": "156b9fa38b04",
+      "bytes": 1056834,
+      "n_records": 1000,
+      "n_clusters": 1000
+    },
+    "data/external_mixset.json": {
+      "sha256": "5f720472787a60bbc580e1401e63ef0d678da85d3e544c26e8c22344bd98f7cc",
+      "sha256_prefix12": "5f720472787a",
+      "bytes": 744356,
+      "n_records": 720,
+      "n_clusters": 120
+    },
+    "data/raw_parents.json": {
+      "sha256": "8647905b89ee3a23f57452b7a9867de18d20b1ba4f39e59f24d5a4b37f224350",
+      "sha256_prefix12": "8647905b89ee",
+      "bytes": 1720811
+    },
+    "data/split_test_id.json": {
+      "sha256": "2241fe10574cac394c92d12689bc9044099354426e89c0cd9ffde9072642b3b3",
+      "sha256_prefix12": "2241fe10574c",
+      "bytes": 2630359,
+      "n_records": 2000,
+      "n_clusters": 200
+    },
+    "data/split_test_ood_ar.json": {
+      "sha256": "9c750cb395d6eee2dc213c3715d35e59071a2983519cebee3ab88e3c5ff4a39f",
+      "sha256_prefix12": "9c750cb395d6",
+      "bytes": 1989489,
+      "n_records": 1200,
+      "n_clusters": 200
+    },
+    "data/split_test_ood_llada.json": {
+      "sha256": "9f74cb930d6ccf39c2a3656bb6f3ceaf395cef26c7dfe11c0ae304e24669ccb6",
+      "sha256_prefix12": "9f74cb930d6c",
+      "bytes": 1245196,
+      "n_records": 900,
+      "n_clusters": 150
+    },
+    "data/split_train.json": {
+      "sha256": "e430760ad7e33ff44d7359afc259159630cb79f8bb905c7aacad483ed29db0a9",
+      "sha256_prefix12": "e430760ad7e3",
+      "bytes": 5368129,
+      "n_records": 4000,
+      "n_clusters": 500
+    },
+    "data/split_val.json": {
+      "sha256": "f7ce3a98facd4891f1883ed143426573a8c2eafa4662865c3c8532be8b0b0409",
+      "sha256_prefix12": "f7ce3a98facd",
+      "bytes": 1297960,
+      "n_records": 960,
+      "n_clusters": 120
+    },
+    "data_v2/parents_and_schedule_v2.json": {
+      "sha256": "776e8c9985f01cc16ea11497ce5f290e6982623f83571bfe8cbbacdd07777b67",
+      "sha256_prefix12": "776e8c9985f0",
+      "bytes": 1877546
+    },
+    "data_v2/provenance_lock.json": {
+      "sha256": "49464ef2a76f4d3e3460419baadc7319bfd6e320de49e617dab93cb37da67603",
+      "sha256_prefix12": "49464ef2a76f",
+      "bytes": 3627
+    },
+    "data_v2/requirements_lock.txt": {
+      "sha256": "a6eebfff272109bc4732b72d4bb1a0892d73e3db37c8f35d3afd7f32dcff0b80",
+      "sha256_prefix12": "a6eebfff2721",
+      "bytes": 14161
+    },
+    "data_v2/split_test_confirm.json": {
+      "sha256": "a02f4927308dd9f216ccf8597b5226b5010aa104583145ffa98a57c4eb254e2e",
+      "sha256_prefix12": "a02f4927308d",
+      "bytes": 1886855,
+      "n_records": 1280,
+      "n_clusters": 160
+    },
+    "data_v2/split_train_fit_v2.json": {
+      "sha256": "a7d1938793ebc00e18daac16d9e934473f5d96cb74888b2468b24e7e52d0ec48",
+      "sha256_prefix12": "a7d1938793eb",
+      "bytes": 6841900,
+      "n_records": 4800,
+      "n_clusters": 600
+    },
+    "data_v2/split_train_op_v2.json": {
+      "sha256": "219d1390fa3631205a05ac6e92483b4c6e54a55150eb640cf9e4ae094b822a83",
+      "sha256_prefix12": "219d1390fa36",
+      "bytes": 2262281,
+      "n_records": 1600,
+      "n_clusters": 200
+    },
+    "data_v2/split_train_v2.json": {
+      "sha256": "bd0a073c7ce5e0d139680fb7f0d3b7168649dd9c51986d226296c140668598ec",
+      "sha256_prefix12": "bd0a073c7ce5",
+      "bytes": 9104179,
+      "n_records": 6400,
+      "n_clusters": 800
+    },
+    "data_v2/v2_cache_drafts_granite_confirm.json": {
+      "sha256": "3734ceb540ed572289590322150c88b48b4b3f1fcb4e48ca5386c1d2e89606e1",
+      "sha256_prefix12": "3734ceb540ed",
+      "bytes": 180465
+    },
+    "data_v2/v2_cache_drafts_qwen.json": {
+      "sha256": "eb49a83ed0494cd9a40364c0299a2b98fd5f8a4273d5d758e5bbc6ee27833fb8",
+      "sha256_prefix12": "eb49a83ed049",
+      "bytes": 321417
+    },
+    "data_v2/v2_cache_drafts_zephyr.json": {
+      "sha256": "df054d60642bbe8cb5c78211ca183bac5cdea383421280d6c7caeb8c98531a69",
+      "sha256_prefix12": "df054d60642b",
+      "bytes": 480790
+    },
+    "data_v2/v2_cache_edits_falcon3.json": {
+      "sha256": "6109480a3e3379771b5feb39e8ba896046d3890e37e93810e358d11d7ace3775",
+      "sha256_prefix12": "6109480a3e33",
+      "bytes": 2371180
+    },
+    "data_v2/v2_cache_edits_phi4_confirm.json": {
+      "sha256": "c514dcf7e040d1af2eb73faed6eebe639791229ce380cec9a001d888344806f6",
+      "sha256_prefix12": "c514dcf7e040",
+      "bytes": 978310
+    },
+    "data_v2/v2_cache_edits_qwen.json": {
+      "sha256": "0f9f0d08c0e47098c078aafbb957a09788416c82028e0f8f6555582a40ef222f",
+      "sha256_prefix12": "0f9f0d08c0e4",
+      "bytes": 2357906
+    },
+    "data_v2/val_manifest.json": {
+      "sha256": "403083cdce164a542fc9ea8dc19fdc45298c1d469ef10d6a68a2fb6fd564b62d",
+      "sha256_prefix12": "403083cdce16",
+      "bytes": 2140
+    }
+  },
+  "archived_checkpoints": {
+    "results_v3/checkpoints/db_v3_cedar_split_op_seed42.pt": {
+      "sha256": "13e03183052c9f9638dcd76c1c793b84fceae7f7c448d9c3f881034688288b91",
+      "sha256_prefix12": "13e03183052c",
+      "bytes": 1739222631
+    },
+    "results_v3/checkpoints/mb_v3_cedar_split_op_seed42.pt": {
+      "sha256": "4e1155e5f89b2acd936192d3da88887aa25936773e4e461cf2d98fb584c70a79",
+      "sha256_prefix12": "4e1155e5f89b",
+      "bytes": 1582221103
+    },
+    "results_v3/checkpoints/mb_v3_strong_combined_no_nsd_seed42.pt": {
+      "sha256": "7c5e83b5b2b8850130cdd6dacfcc42b4441d947c16f6cad5ff8213b1273a3041",
+      "sha256_prefix12": "7c5e83b5b2b8",
+      "bytes": 1582222591
+    }
+  },
+  "result_artifacts": {
+    "results_v3/preds_pretrained_and_probes_v3.json": {
+      "sha256": "4040ea711acad51c12678e46217cb49c4d03ca473e2d3cd9deadf2296465c998",
+      "bytes": 1809872
+    },
+    "results_v3/nsd_v3_theorem2_and_geometry.json": {
+      "sha256": "d756546ff892544d50582123e91536ea27646fe35eae79aa30f86c88e39a1aa3",
+      "bytes": 11530
+    },
+    "results_v3/master_evaluation_summary_v3.json": {
+      "sha256": "d91d15c5788ed4ebd6fe11244d2bf26b87b16e1f36c32de424c967b15bc759f3",
+      "bytes": 1487333
+    }
+  },
+  "neural_prediction_runs": {
+    "results_v3/model_preds_v3/bridge_v1data_aug_erm_seed1042.json": {
+      "sha256": "7e8f2a9213bb96907c3b4eb5714c4ed3f4c5417ac2fd953e1b1f17a65eb03334",
+      "run_name": "bridge_v1data_aug_erm",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 137.12,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "3579b0a316ead7fd4b39"
+    },
+    "results_v3/model_preds_v3/bridge_v1data_aug_erm_seed2042.json": {
+      "sha256": "8f43014e1cd0e36e8bc7ce3738788904cd341140f15885d1385b68d528d31a1f",
+      "run_name": "bridge_v1data_aug_erm",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 137.09,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "a9e1122c44e72f28b0aa"
+    },
+    "results_v3/model_preds_v3/bridge_v1data_aug_erm_seed42.json": {
+      "sha256": "ad96a6e3d20f694d758e0d39b5d7af9559f27f85ed374bb40d4b23ccd09d261c",
+      "run_name": "bridge_v1data_aug_erm",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 137.35,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "b2d6de1d75375d214107"
+    },
+    "results_v3/model_preds_v3/bridge_v1data_v1cedar_seed1042.json": {
+      "sha256": "325df601d7d27fc34d8291eded8667e3a36c3893cc11eb6ec09548c62a63c669",
+      "run_name": "bridge_v1data_v1cedar",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 146.03,
+      "trainable_params": 396056085,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "ecee5c8afb1830d8599b"
+    },
+    "results_v3/model_preds_v3/bridge_v1data_v1cedar_seed2042.json": {
+      "sha256": "495c6cf769ad4c982bc61910e0b8d4e9722d172686b87a3266c0c50f48147dbe",
+      "run_name": "bridge_v1data_v1cedar",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 146.13,
+      "trainable_params": 396056085,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "d9f6b3cd7fc7c3e1c797"
+    },
+    "results_v3/model_preds_v3/bridge_v1data_v1cedar_seed42.json": {
+      "sha256": "a49df3b167ee2bf842e0856114f5efb36df7b7351135eb169ead0963460a87be",
+      "run_name": "bridge_v1data_v1cedar",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 203.81,
+      "trainable_params": 396056085,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "43fc3cedce25de72b2d3"
+    },
+    "results_v3/model_preds_v3/bridge_v1data_v2cedar_seed1042.json": {
+      "sha256": "419635911bfd57ce6f9e527df85a113ab9f8a269e719f1c6e1aafa0422b059fe",
+      "run_name": "bridge_v1data_v2cedar",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 176.68,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "292c1b018a4211920af2"
+    },
+    "results_v3/model_preds_v3/bridge_v1data_v2cedar_seed2042.json": {
+      "sha256": "4b8664771be883b2abf4986ddf9776892d4d2d0cec01c36a4f0d37740d39fe7b",
+      "run_name": "bridge_v1data_v2cedar",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 126.8,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "ba9f939fc552adcfed10"
+    },
+    "results_v3/model_preds_v3/bridge_v1data_v2cedar_seed42.json": {
+      "sha256": "b9bc44197ebb35bb4451a400a6325c933eaa1122e67d7eec5eb57f4f814ecd7b",
+      "run_name": "bridge_v1data_v2cedar",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 126.87,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "497f9a972d8e735df13f"
+    },
+    "results_v3/model_preds_v3/db_v3_augmented_erm_seed1042.json": {
+      "sha256": "eb2105fc985e848b5f91c6b3aaf63c58f10e33a6735cf8002e92d417c3f372de",
+      "run_name": "db_v3_augmented_erm",
+      "seed": 1042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 390.31,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "13645b9cb9f008542703"
+    },
+    "results_v3/model_preds_v3/db_v3_augmented_erm_seed2042.json": {
+      "sha256": "e48c9cf179abf13745eb3e52814bfd018f28596fcd28c90ce12c5ba03823aa5d",
+      "run_name": "db_v3_augmented_erm",
+      "seed": 2042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 391.95,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "ef8674f94905ff4288a6"
+    },
+    "results_v3/model_preds_v3/db_v3_augmented_erm_seed3042.json": {
+      "sha256": "164dd5df6f984d2caf5e3acd1b47dc000023e7deb545911d5e21f8fe46daea50",
+      "run_name": "db_v3_augmented_erm",
+      "seed": 3042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 390.61,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "31fdf7b2e284d710fadb"
+    },
+    "results_v3/model_preds_v3/db_v3_augmented_erm_seed4042.json": {
+      "sha256": "91266869c1bcd2b4fb7db55460a50a1b6877536e4fc8be27b6a36747534bad22",
+      "run_name": "db_v3_augmented_erm",
+      "seed": 4042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 390.61,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "68d60fe359359e01df52"
+    },
+    "results_v3/model_preds_v3/db_v3_augmented_erm_seed42.json": {
+      "sha256": "c119eebfc1b56272c5700e79fe4ddc9059ef03013e8877df1a1322d1391b4d06",
+      "run_name": "db_v3_augmented_erm",
+      "seed": 42,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 390.54,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "1b33a60e96eaf5f24e6b"
+    },
+    "results_v3/model_preds_v3/db_v3_cedar_split_op_seed1042.json": {
+      "sha256": "f85e05f6eff2e3aa68da96b597a30e7d32ab46f3726a7e51c1a2c78fdba3b68e",
+      "run_name": "db_v3_cedar_split_op",
+      "seed": 1042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 349.01,
+      "trainable_params": 434718104,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "e51a355d1e0e98c66faa"
+    },
+    "results_v3/model_preds_v3/db_v3_cedar_split_op_seed2042.json": {
+      "sha256": "3dbae3cf38a6275f39d37cbeea040f39429ef74ce53cc5034215cdd56f0519c7",
+      "run_name": "db_v3_cedar_split_op",
+      "seed": 2042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 348.66,
+      "trainable_params": 434718104,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "e3f3f4ae5812cbafb12d"
+    },
+    "results_v3/model_preds_v3/db_v3_cedar_split_op_seed3042.json": {
+      "sha256": "dd09b26d4411bf7727c15344ffaec29e242b27bde1fd9e04cf96638d806c8327",
+      "run_name": "db_v3_cedar_split_op",
+      "seed": 3042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 351.66,
+      "trainable_params": 434718104,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "48891f5fe2ef1836d284"
+    },
+    "results_v3/model_preds_v3/db_v3_cedar_split_op_seed4042.json": {
+      "sha256": "fb32800ec7501a679d28d77e612e7701294dcb28a3000f7398b7d6188e0db917",
+      "run_name": "db_v3_cedar_split_op",
+      "seed": 4042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 352.58,
+      "trainable_params": 434718104,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "f16e65168d1854a7103e"
+    },
+    "results_v3/model_preds_v3/db_v3_cedar_split_op_seed42.json": {
+      "sha256": "b6763189880afd87fd6336a154aa5920211e7d1599df8327f821c5b1a70c3638",
+      "run_name": "db_v3_cedar_split_op",
+      "seed": 42,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 351.72,
+      "trainable_params": 434718104,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "1b8d31c7aee4d3c0d2df"
+    },
+    "results_v3/model_preds_v3/db_v3_erm_paired_consist_seed1042.json": {
+      "sha256": "ce7e793e07dafe6cbe415dfa5690064ce92ea8f811249e6752958fb233584dfa",
+      "run_name": "db_v3_erm_paired_consist",
+      "seed": 1042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 392.8,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "3f9302dfeab746978826"
+    },
+    "results_v3/model_preds_v3/db_v3_erm_paired_consist_seed2042.json": {
+      "sha256": "5c7fc245e6161be87bfec9c93d8c002e3e5e355bcb46c9909b4b9847b340f2e9",
+      "run_name": "db_v3_erm_paired_consist",
+      "seed": 2042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 393.23,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "1ba3405dbff697093e94"
+    },
+    "results_v3/model_preds_v3/db_v3_erm_paired_consist_seed3042.json": {
+      "sha256": "463e10d30d94b545b92a6d2c26b79cab39519e48b0fbc198314817357810068b",
+      "run_name": "db_v3_erm_paired_consist",
+      "seed": 3042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 394.73,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "3780ded9ece043d35845"
+    },
+    "results_v3/model_preds_v3/db_v3_erm_paired_consist_seed4042.json": {
+      "sha256": "5f22729bbbd37c9af8f58dd8c9859fbba2bc6987b74af10287a573fe9cd95b27",
+      "run_name": "db_v3_erm_paired_consist",
+      "seed": 4042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 393.27,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "4277f378120e7efe3f85"
+    },
+    "results_v3/model_preds_v3/db_v3_erm_paired_consist_seed42.json": {
+      "sha256": "e48d7171e3c2af7a18d1ce747900a97d85ee5b460f5115d248c200b4c189a460",
+      "run_name": "db_v3_erm_paired_consist",
+      "seed": 42,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 393.19,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "8f0304caa01c74f2740f"
+    },
+    "results_v3/model_preds_v3/db_v3_strong_combined_no_nsd_seed1042.json": {
+      "sha256": "2cb194f678d81b00994a0d59c807b764700d194fc2c926a5cc28b76861450068",
+      "run_name": "db_v3_strong_combined_no_nsd",
+      "seed": 1042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 401.58,
+      "trainable_params": 434718104,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "466b6d4c41519e312c88"
+    },
+    "results_v3/model_preds_v3/db_v3_strong_combined_no_nsd_seed2042.json": {
+      "sha256": "23ecd1c45db26694671ee4660d3ee1f7a5c3c603d451eebbfe592054e47ffce2",
+      "run_name": "db_v3_strong_combined_no_nsd",
+      "seed": 2042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 400.92,
+      "trainable_params": 434718104,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "449f9c8c90c0f47c65ca"
+    },
+    "results_v3/model_preds_v3/db_v3_strong_combined_no_nsd_seed3042.json": {
+      "sha256": "30f471b8758b1783e954a8fa80687e0d700e8659fe2c520670f5f097ff96c1e4",
+      "run_name": "db_v3_strong_combined_no_nsd",
+      "seed": 3042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 401.16,
+      "trainable_params": 434718104,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "dcc205170d4d6bc85e6e"
+    },
+    "results_v3/model_preds_v3/db_v3_strong_combined_no_nsd_seed4042.json": {
+      "sha256": "e752320e67e4b44c36b71a4d41b56fe792cb0a9da8f8a05c163b1b24d18351fd",
+      "run_name": "db_v3_strong_combined_no_nsd",
+      "seed": 4042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 401.15,
+      "trainable_params": 434718104,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "80147b0ddd175107d652"
+    },
+    "results_v3/model_preds_v3/db_v3_strong_combined_no_nsd_seed42.json": {
+      "sha256": "e90237b6da9dabe6987408066f07c4b0de28ba730503941c4bf13ff4f62f7a3a",
+      "run_name": "db_v3_strong_combined_no_nsd",
+      "seed": 42,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 403.9,
+      "trainable_params": 434718104,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "863fa4f9920b13a7e13c"
+    },
+    "results_v3/model_preds_v3/db_v3_supcon_orth_disentangle_seed1042.json": {
+      "sha256": "d476b2cd473232c4544d45c8fad98751688579ef6d6276c107e5311cb442ca0e",
+      "run_name": "db_v3_supcon_orth_disentangle",
+      "seed": 1042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 391.05,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "677694b9a7f6ba5ef7e8"
+    },
+    "results_v3/model_preds_v3/db_v3_supcon_orth_disentangle_seed2042.json": {
+      "sha256": "a9d3dfaf91ea63326582de37aa2ad77596489b6e5622f5e0a3e3d00bf77b70fc",
+      "run_name": "db_v3_supcon_orth_disentangle",
+      "seed": 2042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 391.4,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "67a19b5a60da99fdfe93"
+    },
+    "results_v3/model_preds_v3/db_v3_supcon_orth_disentangle_seed3042.json": {
+      "sha256": "b9beb68afe11773eed32c880db967f084b355f406c4b6ddf8c90dd2f1998a87a",
+      "run_name": "db_v3_supcon_orth_disentangle",
+      "seed": 3042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 391.19,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "10576da034549987aded"
+    },
+    "results_v3/model_preds_v3/db_v3_supcon_orth_disentangle_seed4042.json": {
+      "sha256": "0bf2ca637219c8043b1ea32e18fb95d874e1fe05cfecd372685dfd9bb52a39ab",
+      "run_name": "db_v3_supcon_orth_disentangle",
+      "seed": 4042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 391.24,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "4de0919be46a1c4d3336"
+    },
+    "results_v3/model_preds_v3/db_v3_supcon_orth_disentangle_seed42.json": {
+      "sha256": "5ec17f38fed33a01eac22c60f1eedc292b0e2a4087166c6100f096f945e40ff3",
+      "run_name": "db_v3_supcon_orth_disentangle",
+      "seed": 42,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 391.69,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "5f3e863257275eb84020"
+    },
+    "results_v3/model_preds_v3/db_v3_unedited_erm_seed1042.json": {
+      "sha256": "a443a88bd9fb7dc4f13121d2e36673877419df1bcee35363b2f74eda2f627bc0",
+      "run_name": "db_v3_unedited_erm",
+      "seed": 1042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 391.01,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "41350b24e5dbb3b8c50b"
+    },
+    "results_v3/model_preds_v3/db_v3_unedited_erm_seed2042.json": {
+      "sha256": "9e54a883e13664026268fe3339f349feebf810564acf98df519703b5dcba10d9",
+      "run_name": "db_v3_unedited_erm",
+      "seed": 2042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 391.18,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "ea07b1dd791803e999cf"
+    },
+    "results_v3/model_preds_v3/db_v3_unedited_erm_seed3042.json": {
+      "sha256": "2496f22bf30650bb79926684dd52cc75e4ef4a81404a18ad5616aec1c0bc6d8b",
+      "run_name": "db_v3_unedited_erm",
+      "seed": 3042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 715.78,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "4ab3915bc8948ad7649f"
+    },
+    "results_v3/model_preds_v3/db_v3_unedited_erm_seed4042.json": {
+      "sha256": "f003aeb255b2c241f676b8ba144a110efbab9cc78376316ab9840b532b7019ad",
+      "run_name": "db_v3_unedited_erm",
+      "seed": 4042,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 391.49,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "854283628af4826b7503"
+    },
+    "results_v3/model_preds_v3/db_v3_unedited_erm_seed42.json": {
+      "sha256": "c536bf1854fba7b3617474c7c3b14d3668906606955993c68c68b322b6322fe6",
+      "run_name": "db_v3_unedited_erm",
+      "seed": 42,
+      "backbone": "microsoft/deberta-v3-large",
+      "backbone_commit_sha": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "total_seconds": 391.32,
+      "trainable_params": 434579465,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "7f7d397bb6ec42178106"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_ema_only_seed1042.json": {
+      "sha256": "828724715a1b4c56cb9a6386d4eedfc5c94995eb729bb09301e47d0b72f3cc82",
+      "run_name": "mb_v3_ablation_ema_only",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 169.67,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "b6aca609203692c088ae"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_ema_only_seed2042.json": {
+      "sha256": "c0abe3f7085d24c278788ef048658a73918a6359e04d8a88613e2a92b776265a",
+      "run_name": "mb_v3_ablation_ema_only",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 236.66,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "556fe193e9d453b9babe"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_ema_only_seed42.json": {
+      "sha256": "89b3d87a0fe4de839d17e214295859602ecd1278e3ea68e5c2aadf591fbefe62",
+      "run_name": "mb_v3_ablation_ema_only",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 169.32,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "139eb516a9b9c4d7a6b1"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_no_dte_seed1042.json": {
+      "sha256": "e94072a55dc316e17023e946606c8c908875e24359b5d199cf049e4883eb411d",
+      "run_name": "mb_v3_ablation_no_dte",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 242.71,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "3bf48cb6aba74d1ab5ad"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_no_dte_seed2042.json": {
+      "sha256": "46d91551d1a114bf3f6ee91bee80d45c82da3e943c5356ef5d48371b47487d39",
+      "run_name": "mb_v3_ablation_no_dte",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 180.11,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "9468150cc6af1780f314"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_no_dte_seed42.json": {
+      "sha256": "67ef4477e64f408e03d089572e64b793c25fb6ccd41dc32e5b2eba7e5ab62eb2",
+      "run_name": "mb_v3_ablation_no_dte",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 179.65,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "46e73c6cd9c9872bae5b"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_no_xmargin_seed1042.json": {
+      "sha256": "4c7618c623214aab0c42beba3fc5b973408932521de234657eb28d5bd5025fdc",
+      "run_name": "mb_v3_ablation_no_xmargin",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 185.12,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "015e1601e209e28e127c"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_no_xmargin_seed2042.json": {
+      "sha256": "0ad15162ad14558257fdfbe3623d1b410fed3b911add77204bdb2673112bf121",
+      "run_name": "mb_v3_ablation_no_xmargin",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 184.41,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "7bd76942ce041689479d"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_no_xmargin_seed42.json": {
+      "sha256": "dee66420644858e7a9075097d5be2c6a033dac540641524a4ec755a5c7b3cb50",
+      "run_name": "mb_v3_ablation_no_xmargin",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 255.93,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "8a3db38b183fa6d21131"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_param_matched_mlp_seed1042.json": {
+      "sha256": "c15ed111e7682e3f8c63177044071e5b8c74f8e310a2c239f2d4ed54fc9dfeac",
+      "run_name": "mb_v3_ablation_param_matched_mlp",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 180.09,
+      "trainable_params": 395487681,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "a88f518e6cc2601c44e7"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_param_matched_mlp_seed2042.json": {
+      "sha256": "c2e3770b918de243e3199d765d3aeb6c9a8fe7854354606a7258daffc0ad29c0",
+      "run_name": "mb_v3_ablation_param_matched_mlp",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 242.77,
+      "trainable_params": 395487681,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "bed1b57899b278541f1f"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_param_matched_mlp_seed42.json": {
+      "sha256": "39ee249c9b3c564dd38c292b1d086de6ed8c90653ab28df88c6c4035bf3a284c",
+      "run_name": "mb_v3_ablation_param_matched_mlp",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 179.93,
+      "trainable_params": 395487681,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "bc21ef5a87ffd4acde69"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_unprotected_nsd_seed1042.json": {
+      "sha256": "d65f48747b36e38ea8764e6e80775ea57f3118a45d8baa130dda26a334aaf82b",
+      "run_name": "mb_v3_ablation_unprotected_nsd",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 185.31,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "a1a1b59d0022e61cb15f"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_unprotected_nsd_seed2042.json": {
+      "sha256": "dfd3aaeb856b413c3d0658e478d516a3e24fa1be04434670db18ddc1ad913abc",
+      "run_name": "mb_v3_ablation_unprotected_nsd",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 185.14,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "85b3af54605f6a02cfbf"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_unprotected_nsd_seed42.json": {
+      "sha256": "cd767f71b121a0393d3d620d290698e1ce698170308fb58293bda0e6e4d91aaf",
+      "run_name": "mb_v3_ablation_unprotected_nsd",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 185.13,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "7502943f165ac79670ae"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_unweighted_pair_seed1042.json": {
+      "sha256": "e9ee985a89f1a4052620e77e3554cabb365ff640057d2025b611b27bc01b7d70",
+      "run_name": "mb_v3_ablation_unweighted_pair",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 184.9,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "8aa128d09709265e2288"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_unweighted_pair_seed2042.json": {
+      "sha256": "7871a15cdba6012fb60478fdfd3755e33549777b8aa8a664d94151bc04f210c2",
+      "run_name": "mb_v3_ablation_unweighted_pair",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 185.11,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "51f0c234ecc6abed8449"
+    },
+    "results_v3/model_preds_v3/mb_v3_ablation_unweighted_pair_seed42.json": {
+      "sha256": "b2c3bb3a82ac4993b0cc0c6c16ff63301fe6942886b7ef2d3ddbea134d5892ba",
+      "run_name": "mb_v3_ablation_unweighted_pair",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 185.4,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "64f4a44fd61799365b03"
+    },
+    "results_v3/model_preds_v3/mb_v3_augmented_erm_seed1042.json": {
+      "sha256": "a35db84dfaa4216787ded99673e07c8a8ab327c93876dca4dfa57c5e3f233e1b",
+      "run_name": "mb_v3_augmented_erm",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 201.36,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "9a6cf080767717037212"
+    },
+    "results_v3/model_preds_v3/mb_v3_augmented_erm_seed2042.json": {
+      "sha256": "f2ca7379f16ac332e0fa26edd44a4d27f0155ec63eb0fad6f45ca2c6a1e73c23",
+      "run_name": "mb_v3_augmented_erm",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 283.61,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "e0c7915f9fcb94e917cd"
+    },
+    "results_v3/model_preds_v3/mb_v3_augmented_erm_seed3042.json": {
+      "sha256": "e166961eaa236fb882f456fd8de33a504115c2ac9fcfa156e0dfc60bcccf1dd3",
+      "run_name": "mb_v3_augmented_erm",
+      "seed": 3042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 201.53,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "05ac6a40fa3f13318dfd"
+    },
+    "results_v3/model_preds_v3/mb_v3_augmented_erm_seed4042.json": {
+      "sha256": "3ef34e2d1117cfb5cdd92c53ffce5a92f77aed18e9a5b23893a80ad61469a090",
+      "run_name": "mb_v3_augmented_erm",
+      "seed": 4042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 283.56,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "408293174490d2b1c0d3"
+    },
+    "results_v3/model_preds_v3/mb_v3_augmented_erm_seed42.json": {
+      "sha256": "eaba79b23097c32b9828ff46cbfa7b6195062f904927f005bc4b3dcfd5986b1e",
+      "run_name": "mb_v3_augmented_erm",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 284.04,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "496738e2bba2bf25167e"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_full800_seed1042.json": {
+      "sha256": "6840780da82cf1292f7f864eeda0322ad2e6fb76e4fd2334288bcacb92ad400c",
+      "run_name": "mb_v3_cedar_full800",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 278.93,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "896979e7383eb0f60b20"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_full800_seed2042.json": {
+      "sha256": "2ad5dcc21ffefe61ddfa98cc9b1a809522d4350c32ce28ec6826806756530bb5",
+      "run_name": "mb_v3_cedar_full800",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 278.95,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "50f53a569e977f277492"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_full800_seed3042.json": {
+      "sha256": "e2da262847d12ae5c6b2dc8d1bacfef4301bfcbce9008ff4912a529f33b6a0d0",
+      "run_name": "mb_v3_cedar_full800",
+      "seed": 3042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 386.01,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "22dbd7782bbf2cc2c872"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_full800_seed4042.json": {
+      "sha256": "7d9a571ff7fe9b4ab3862a9c5616f1939eed8399ac4939427ddce8f70e299197",
+      "run_name": "mb_v3_cedar_full800",
+      "seed": 4042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 279.4,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "eb958956db8b32ca836b"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_full800_seed42.json": {
+      "sha256": "2b609ffd6d699a511082c256037537d0ef30b4577368cfdcb6ee985e40d57510",
+      "run_name": "mb_v3_cedar_full800",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 279.75,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "cc3aa0051272d0ffe5dc"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_rank48_seed1042.json": {
+      "sha256": "e83b5386e3f4d892c56646c019813ce1e2a908736b1e8a89bf83307b82dde39c",
+      "run_name": "mb_v3_cedar_rank48",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 185.37,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "f8b8e42ed12c87db0c01"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_rank48_seed2042.json": {
+      "sha256": "ed090b34ed96e0475cecb60502a7c3f7d3c518ae8823b64ad497c9ef3eccb7b5",
+      "run_name": "mb_v3_cedar_rank48",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 258.18,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "3ed8038f48ff30d29cad"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_rank48_seed42.json": {
+      "sha256": "b2e9b101078bad2638ac49d080bc961638acdeaf5330672bef3bb4a2936fc2c7",
+      "run_name": "mb_v3_cedar_rank48",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 184.87,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "47f2a10fb0d3c69f186b"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_rank8_seed1042.json": {
+      "sha256": "96653bb4e0f474dba02035684e01a4dd5c85a07d4a836785ee1eb074f7078732",
+      "run_name": "mb_v3_cedar_rank8",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 257.77,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "160759aa8b890dfbce9d"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_rank8_seed2042.json": {
+      "sha256": "6076f42941705c23c896c89dec306103207b2ebd77242646d1c8a58e8f3c6cb6",
+      "run_name": "mb_v3_cedar_rank8",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 185.12,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "bcbea305f66415ec4ba6"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_rank8_seed42.json": {
+      "sha256": "a19b3862da0a2af7ac8f8ba93fc792e7318a93b98112150d995aa2a073774410",
+      "run_name": "mb_v3_cedar_rank8",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 185.23,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "5a5c7a19a073c33e9862"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_split_op_seed1042.json": {
+      "sha256": "7be1532c2497d8edf02ca4139e94033dcd40e848593636d3fff4ed8eed0349b3",
+      "run_name": "mb_v3_cedar_split_op",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 185.29,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "d7eed178c6b2d00ae5a5"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_split_op_seed2042.json": {
+      "sha256": "fd9094d6c54e9fb6915f8148907ebeda1b3127ffa2b54a41deddc2ffc225aee4",
+      "run_name": "mb_v3_cedar_split_op",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 185.11,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "d4f0c94592b4f808a3e2"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_split_op_seed3042.json": {
+      "sha256": "cb8067a953ea9cefa462d0b9a11485955c3d390e2eaaba85978c702c1a4ec3da",
+      "run_name": "mb_v3_cedar_split_op",
+      "seed": 3042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 185.42,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "72c44149468bcac90801"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_split_op_seed4042.json": {
+      "sha256": "b28374c8c660f09d546292cceda6d449dfac712ae668925ceeb489d75966d89f",
+      "run_name": "mb_v3_cedar_split_op",
+      "seed": 4042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 257.43,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "115b7d584e2bf89158d5"
+    },
+    "results_v3/model_preds_v3/mb_v3_cedar_split_op_seed42.json": {
+      "sha256": "a1f07b602e84d776529619efa8bfb80242acdb99b21cfd932574008110adc40b",
+      "run_name": "mb_v3_cedar_split_op",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 272.17,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "a44d419eca63ac79a3b7"
+    },
+    "results_v3/model_preds_v3/mb_v3_erm_group_dro_seed1042.json": {
+      "sha256": "2a7836b4d22184d183c91daca6869132471593bc2aed326b7e6bc1a19fdce8f1",
+      "run_name": "mb_v3_erm_group_dro",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 202.19,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "dfc484d8d903086800d3"
+    },
+    "results_v3/model_preds_v3/mb_v3_erm_group_dro_seed2042.json": {
+      "sha256": "89ca6b13cad18c7e2a9f32b920fdd116c243031a008c19ce35e5562393dd2c55",
+      "run_name": "mb_v3_erm_group_dro",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 208.25,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "39679dde27896bf7ed71"
+    },
+    "results_v3/model_preds_v3/mb_v3_erm_group_dro_seed3042.json": {
+      "sha256": "f5b5a2ab20c4a3e229edac5ff2a15eadcaa394cd018d5aad834d989dee044196",
+      "run_name": "mb_v3_erm_group_dro",
+      "seed": 3042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 202.52,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "74cc41da662fd138b310"
+    },
+    "results_v3/model_preds_v3/mb_v3_erm_group_dro_seed4042.json": {
+      "sha256": "a4264d08d24d1fc8860540f86660c176fa351bbb53fe3f5a3f8b5b7ef894f3bd",
+      "run_name": "mb_v3_erm_group_dro",
+      "seed": 4042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 209.09,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "21c3a90368e67f9fd33c"
+    },
+    "results_v3/model_preds_v3/mb_v3_erm_group_dro_seed42.json": {
+      "sha256": "2f9b33a808763589140cb196065398df87854d2971511dc86671887c57450287",
+      "run_name": "mb_v3_erm_group_dro",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 286.0,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "c9beea100171786d20cc"
+    },
+    "results_v3/model_preds_v3/mb_v3_erm_paired_consist_seed1042.json": {
+      "sha256": "76d2f7fd1a9a2076ff55a3d70417fb461011853dfab2b59c4a8c39eb90a1d056",
+      "run_name": "mb_v3_erm_paired_consist",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 291.63,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "9d591cd6292c6d0b153e"
+    },
+    "results_v3/model_preds_v3/mb_v3_erm_paired_consist_seed2042.json": {
+      "sha256": "8a961920f01532aafa8997b649ee4ddbe28bb1c32a84cccb36836bcf7cd0baa2",
+      "run_name": "mb_v3_erm_paired_consist",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 203.8,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "55cefa70752629393dc3"
+    },
+    "results_v3/model_preds_v3/mb_v3_erm_paired_consist_seed3042.json": {
+      "sha256": "672014e12a138d1e777a7016fc9ae85f055d472aa81afac19dd8adb8e77e80ec",
+      "run_name": "mb_v3_erm_paired_consist",
+      "seed": 3042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 291.27,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "8dbeefada3034a02af49"
+    },
+    "results_v3/model_preds_v3/mb_v3_erm_paired_consist_seed4042.json": {
+      "sha256": "1597b84aa5aedf97d08d3b31f7d7f33cde74b69398637451a76feef660127b4f",
+      "run_name": "mb_v3_erm_paired_consist",
+      "seed": 4042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 204.22,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "f82548a02c1fe42f0974"
+    },
+    "results_v3/model_preds_v3/mb_v3_erm_paired_consist_seed42.json": {
+      "sha256": "7d7170380100933b8d7764aad6b18886fd5b6d347c77724f9559205b50ca0dac",
+      "run_name": "mb_v3_erm_paired_consist",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 204.07,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "ebac8b9c4237eb9a82ff"
+    },
+    "results_v3/model_preds_v3/mb_v3_joint_8class_ce_seed1042.json": {
+      "sha256": "76b90d7b8d46686b5271ca565a317c2732358335ea9df5f67eb19d0cce047c2a",
+      "run_name": "mb_v3_joint_8class_ce",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 286.82,
+      "trainable_params": 395340680,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "47e11d9e41868bdcdb8a"
+    },
+    "results_v3/model_preds_v3/mb_v3_joint_8class_ce_seed2042.json": {
+      "sha256": "03bb6541502d89cc4cddbf06b0b009858d85eddc1f8ee32b783fefa144183299",
+      "run_name": "mb_v3_joint_8class_ce",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 201.52,
+      "trainable_params": 395340680,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "b83a6d2902cd03aedc12"
+    },
+    "results_v3/model_preds_v3/mb_v3_joint_8class_ce_seed3042.json": {
+      "sha256": "9e8f345ea23600be3588c3d67d57dea82b50ecc80d296591d0d466d420cd4e77",
+      "run_name": "mb_v3_joint_8class_ce",
+      "seed": 3042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 282.83,
+      "trainable_params": 395340680,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "61f11e065cc409f76feb"
+    },
+    "results_v3/model_preds_v3/mb_v3_joint_8class_ce_seed4042.json": {
+      "sha256": "053de2ff19693c6b4b0e56db2c89ec5a07f502591adcb9401b04028f2e202315",
+      "run_name": "mb_v3_joint_8class_ce",
+      "seed": 4042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 201.2,
+      "trainable_params": 395340680,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "1314d485028d6416aeed"
+    },
+    "results_v3/model_preds_v3/mb_v3_joint_8class_ce_seed42.json": {
+      "sha256": "fc4ca5b1bee4aaa0dd099a4989f21c1f5df88f43394d51c893db1fa24ed35428",
+      "run_name": "mb_v3_joint_8class_ce",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 201.5,
+      "trainable_params": 395340680,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "26dee453d9c397519498"
+    },
+    "results_v3/model_preds_v3/mb_v3_multitask_2head_seed1042.json": {
+      "sha256": "38ff9bb86715379cbc4fe0439865b5fb3ed43f84c2b2c1935d6fd13d6ac20484",
+      "run_name": "mb_v3_multitask_2head",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 203.31,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "f77270435ac85a8351f7"
+    },
+    "results_v3/model_preds_v3/mb_v3_multitask_2head_seed2042.json": {
+      "sha256": "7441c16bfb0ca250f679fb1be2eb0256f802144fdd598a1647856cd742bdd9c6",
+      "run_name": "mb_v3_multitask_2head",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 283.94,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "20fcff815829d6e2b3ee"
+    },
+    "results_v3/model_preds_v3/mb_v3_multitask_2head_seed3042.json": {
+      "sha256": "1496b3150ff53b8385e00409341ab8ba5f998e2b36e9b2af1379790374605892",
+      "run_name": "mb_v3_multitask_2head",
+      "seed": 3042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 201.62,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "7dd6e96a641efb768bf8"
+    },
+    "results_v3/model_preds_v3/mb_v3_multitask_2head_seed4042.json": {
+      "sha256": "daf9c08061fbd2ff323fee40cf35b6cfef6295e86b97b15b22aadfd49dee95c3",
+      "run_name": "mb_v3_multitask_2head",
+      "seed": 4042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 283.31,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "bfb09d6e60eb808dceae"
+    },
+    "results_v3/model_preds_v3/mb_v3_multitask_2head_seed42.json": {
+      "sha256": "b6240b618142736e1d18e83ca57fba233638e737ca934d9ce478db2484c93aa3",
+      "run_name": "mb_v3_multitask_2head",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 283.93,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "ecdd6b32d525ac8954f1"
+    },
+    "results_v3/model_preds_v3/mb_v3_strong_combined_fit600_no_nsd_seed1042.json": {
+      "sha256": "b7b21813c76dfe80cb8e4ae1b3b61ecfcb982d459b89b3b8cfd282cd83a6dad9",
+      "run_name": "mb_v3_strong_combined_fit600_no_nsd",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 167.1,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "666b5f6398e69531041b"
+    },
+    "results_v3/model_preds_v3/mb_v3_strong_combined_fit600_no_nsd_seed2042.json": {
+      "sha256": "f50a310a94f6c407b5afc949cc7a61f1104b814dd36030c43ad9741f5249429d",
+      "run_name": "mb_v3_strong_combined_fit600_no_nsd",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 166.8,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "bb2171fcdf4099f28500"
+    },
+    "results_v3/model_preds_v3/mb_v3_strong_combined_fit600_no_nsd_seed42.json": {
+      "sha256": "6f660366da7e7d72732f712a046e4e2086ddaa0c9f25c13fbf867b49164bc235",
+      "run_name": "mb_v3_strong_combined_fit600_no_nsd",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 231.43,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "0a675e8fac8a416c98bb"
+    },
+    "results_v3/model_preds_v3/mb_v3_strong_combined_no_nsd_seed1042.json": {
+      "sha256": "764f219dd3f9e7297910690178c952936197739f701647c56d59000c7a6eb19c",
+      "run_name": "mb_v3_strong_combined_no_nsd",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 212.64,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "ad77502544e0529edc70"
+    },
+    "results_v3/model_preds_v3/mb_v3_strong_combined_no_nsd_seed2042.json": {
+      "sha256": "5ebb4047e8825330aaa118f7856927d986f230901320f3e57b0489de1e1834d5",
+      "run_name": "mb_v3_strong_combined_no_nsd",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 220.07,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "4efff9694c14b0e08127"
+    },
+    "results_v3/model_preds_v3/mb_v3_strong_combined_no_nsd_seed3042.json": {
+      "sha256": "e2bb2d2e9ca742c098980a968c78d7812a84d36a5e14b570d2831b080d7d31a1",
+      "run_name": "mb_v3_strong_combined_no_nsd",
+      "seed": 3042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 211.92,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "6c3824e95f6231636a3b"
+    },
+    "results_v3/model_preds_v3/mb_v3_strong_combined_no_nsd_seed4042.json": {
+      "sha256": "749fcf2f221e3287e0ad96ae7990c5a2225d67df99b6a3bc87da136ab09056a5",
+      "run_name": "mb_v3_strong_combined_no_nsd",
+      "seed": 4042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 219.24,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "1fbd317623d35709b66f"
+    },
+    "results_v3/model_preds_v3/mb_v3_strong_combined_no_nsd_seed42.json": {
+      "sha256": "9ceb70d1917ab07c0465e4891d7d3b6bd90803ac20ca9154936afe5becc634e0",
+      "run_name": "mb_v3_strong_combined_no_nsd",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 220.47,
+      "trainable_params": 395487640,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "e0743e66a071289cff3b"
+    },
+    "results_v3/model_preds_v3/mb_v3_supcon_orth_disentangle_seed1042.json": {
+      "sha256": "8398ed0e51aa88ca5dac8c87ab8031af4cfcff16f108b23739fcdeee589c7112",
+      "run_name": "mb_v3_supcon_orth_disentangle",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 208.24,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "9a6b1d66be57a233b681"
+    },
+    "results_v3/model_preds_v3/mb_v3_supcon_orth_disentangle_seed2042.json": {
+      "sha256": "dd120abb8debdaea3b0ef9223561c7725684a7145c0118733c6450a762fbb638",
+      "run_name": "mb_v3_supcon_orth_disentangle",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 202.04,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "a16e2452964f1bf4ee1b"
+    },
+    "results_v3/model_preds_v3/mb_v3_supcon_orth_disentangle_seed3042.json": {
+      "sha256": "8dc16d7dcbf22a7b6bb00ba08fdd7f99ea68ed54fd266085227f9ecec961eb62",
+      "run_name": "mb_v3_supcon_orth_disentangle",
+      "seed": 3042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 280.64,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "665cf10afdc08becdb2d"
+    },
+    "results_v3/model_preds_v3/mb_v3_supcon_orth_disentangle_seed4042.json": {
+      "sha256": "30a69307f05bccb8d92c85c261143ae11d81655fb9be3f653fad609fa9d5ea5f",
+      "run_name": "mb_v3_supcon_orth_disentangle",
+      "seed": 4042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 202.12,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "1c6794b5d9368a8dc02c"
+    },
+    "results_v3/model_preds_v3/mb_v3_supcon_orth_disentangle_seed42.json": {
+      "sha256": "b6727db4c6a85faea7cf0103cd33865dc55f36877440c925a49c23a844dfee5f",
+      "run_name": "mb_v3_supcon_orth_disentangle",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 202.1,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "bd276ae9bc4692db0c77"
+    },
+    "results_v3/model_preds_v3/mb_v3_unedited_erm_seed1042.json": {
+      "sha256": "aab4869bb0c0aeb9343f45484f72b9517564aff75c899bdd56f6d08bd8f8e503",
+      "run_name": "mb_v3_unedited_erm",
+      "seed": 1042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 287.54,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "d6f0990bd1b6b1ff9784"
+    },
+    "results_v3/model_preds_v3/mb_v3_unedited_erm_seed2042.json": {
+      "sha256": "aaa521ca137a6ee79b755007d6764ae1389e54b0dae7799d1b2280d3ecaff675",
+      "run_name": "mb_v3_unedited_erm",
+      "seed": 2042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 201.51,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "4ea280f2f4ef7d97c46b"
+    },
+    "results_v3/model_preds_v3/mb_v3_unedited_erm_seed3042.json": {
+      "sha256": "91886ca768870ffb1523e06fcac9e75fc3d17e9a97bf47d87a9516db802b1733",
+      "run_name": "mb_v3_unedited_erm",
+      "seed": 3042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 282.87,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "085f29e4e3060de2fb6a"
+    },
+    "results_v3/model_preds_v3/mb_v3_unedited_erm_seed4042.json": {
+      "sha256": "534fa18788ae9d11388cdd22af894f169b02f3be137beb91be052931c558c068",
+      "run_name": "mb_v3_unedited_erm",
+      "seed": 4042,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 201.22,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "b67fb1310abbee63dadc"
+    },
+    "results_v3/model_preds_v3/mb_v3_unedited_erm_seed42.json": {
+      "sha256": "4d25989966df2addd73d3934ae4e0e06c277a4bdab2127cb12d351ad2f763a5d",
+      "run_name": "mb_v3_unedited_erm",
+      "seed": 42,
+      "backbone": "answerdotai/ModernBERT-large",
+      "backbone_commit_sha": "45bb4654a4d5aaff24dd11d4781fa46d39bf8c13",
+      "total_seconds": 203.25,
+      "trainable_params": 395349001,
+      "data_fingerprint": "b848887322da4770e5d334fa",
+      "config_hash": "669331b0168a51ffeafa"
+    }
+  }
+}
